@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.firstPart{
+   
+    color: white;
+   
+}
+.secondPart{
+    background-color: rgb(95, 141, 126);
+}
+.firstColumn{
+    background-color: rgb(101, 149, 94);
+}
