@@ -1,16 +1,54 @@
+/* Universal CSS Selectors */
+
+:root {
+
+    --dark-grey: #1A1A1D;
+    --light-grey: #4E4E50;
+
+    --bright-pink: #C3073F;
+    --red-pink: #950740;
+    --muted-pink: #6F2232;
+
+}
+
 body{
     margin: 0;
     padding: 0;
+    background-color: var(--dark-grey);
 }
 
-.firstPart{
-   
-    color: white;
-   
+.btn {
+    background-color: var(--bright-pink);
 }
-.secondPart{
-    background-color: rgb(95, 141, 126);
+
+.btn:hover {
+    background-color: var(--muted-pink);
 }
-.firstColumn{
-    background-color: rgb(101, 149, 94);
+
+/* Nav Bar CSS Selectors */
+
+nav {
+    background-color: var(--bright-pink);
+}
+
+/* Left Side Col CSS Selectors */
+
+.left-side-col{
+    background-color: var(--light-grey);
+}
+
+.btn-group button {
+    display: block; /* Make the buttons appear below each other */
+    margin: 5px;
+}
+  
+  .btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+
+/* Right Side Col CSS Selectors */
+
+.right-side-col{
+    
 }
