@@ -25,6 +25,10 @@ body{
     background-color: var(--muted-pink);
 }
 
+.main-col {
+    height: 100vh;
+}
+
 /* Nav Bar CSS Selectors */
 
 nav {
@@ -50,5 +54,5 @@ nav {
 /* Right Side Col CSS Selectors */
 
 .right-side-col{
-    
+    color: white;
 }
