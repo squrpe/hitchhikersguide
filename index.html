@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hitch Hikers Guide</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
     <link rel="stylesheet" href="./Assets/styles.css">
-</head>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>  $( function() {
+        $( "#search" ).selectmenu();
+     
 
-<body>
+      } );</script>
     
+</head>
+<body> 
+
     <!-- Header/Nav Bar Section -->
     <nav>
         <div class="nav-wrapper">
@@ -22,12 +31,29 @@
     <div class="row">
 
         <!-- Left Col Section -->
-        <div class="col s3 left-side-col main-col">
+        <div class="col s3 left-side-col">
 
-            <!-- User Input Section -->
+            <!--dropdown section from jquery UI-->
+            <div class="dropdown-container">
+                <form action="#">               
+                    <fieldset>
+                        <label for="dropdown">Select a speed</label>
+                        <select name="dropdown" id="search">
+                          <option value="Australia Tourism">AUS</option>
+                          <option value="America Tourism">USA</option>
+                          <option value="European Tourism">EURO</option>
+                          <option value="Asia Tourism">ASIA</option>
+                        </select>
+                  </fieldset>                
+                </form>                
+                </div>
+
+                <!-- Input Section -->
             <div class="input-field col s12">
-                <input class="validate" id="" type="text" placeholder="Enter a Country Name">
-                <a class="waves-effect waves-light btn"><i class="material-icons left"></i>Search</a>
+                <form>
+                    <button class="waves-effect waves-light btn material-icons left" type="submit" value="search">search</button>
+                </form>
+               <!-- <a class="waves-effect waves-light btn"><i class="material-icons left"></i>Search</a>-->
             </div>
 
             <!-- Search History Section -->
@@ -38,7 +64,6 @@
             </div>
 
         </div>
-
 
         <!-- Right Col Section -->
         <div class="col s9 right-side-col main-col">
@@ -56,18 +81,15 @@
                 </div>
 
             <!-- Youtube API Section -->
-                <div class="col s12">
-                    <p>test3</p>
+                <div class="col s12" id="videos">
+                   
                 </div>
-
             </div>
-
-        </div>
-
-        
+        </div>       
     </div>
-
     <script type="text/javascript" src="./Assets/script.js"></script>
-
 </body>
+
+
+
 </html>

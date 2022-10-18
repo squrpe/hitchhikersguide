@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
     var API_KEY = "AIzaSyB4n8ZsQ41g-21s8rjJJDYZFSigRF8Qb4U"
     var video = ''
@@ -7,7 +5,7 @@ $(document).ready(function(){
     $("form").submit(function (event) {
         event.preventDefault()
 
-        var search = $("#search").val()
+        var search = $("#search").find(":selected").val()
         console.log(search)
         videoSearch(API_KEY,search,5)
     })
