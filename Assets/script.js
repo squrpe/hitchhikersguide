@@ -11,25 +11,14 @@ $(document).ready(function(){
 
         var search = $("#search").find(":selected").val();
         console.log(search)
-
         var countryValue = $('#search').find(":selected").data('country');
-
-        // var search = $("#search").find(":selected");
-        // console.log(search)
-
-        // var countryValue = $(this).find(":selected");
-
         console.log(countryValue);
-
         countrySearch(countryValue)
-        videoSearch(API_KEY,search,5)
+        videoSearch(API_KEY,search,6)
         
     })
 
     function videoSearch(key, search,maxResults) {
-
-        //search + " tourism"
-
         $.get("https://www.googleapis.com/youtube/v3/search?key=" + key + "&type=video&part=snippet&maxResults=" + maxResults + "&q=" + search,function(data){
             console.log(data)
             data.items.forEach(item => {
