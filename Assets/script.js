@@ -62,7 +62,7 @@ $("#searchbtn").on("click", function(event) {
     localStorage.setItem("city", JSON.stringify(searchHistoryList));
     console.log(searchHistoryList);
 });
-$(document).on("click", ".list-group-item", function() {
-    var listCountry = $(this).text();
-    countrySearch(countryValue);
-});
+// $(document).on("click", ".list-group-item", function() {
+//     var listCountry = $(this).text();
+//     countrySearch(countryValue);
+// });
