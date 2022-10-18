@@ -32,42 +32,50 @@
     <div class="row">
 
         <!-- Left Col Section -->
-        <div class="col s3 left-side-col">
+        <div class="col s12 left-side-col">
 
             <!--dropdown section from jquery UI-->
-            <div class="dropdown-container">
+            <div class="dropdown-container center">
                 <form action="#">               
                     <fieldset>
                         <label for="dropdown">Select a speed</label>
                         <select name="dropdown" id="search">
-                          <option value="Australia Tourism">AUS</option>
-                          <option value="America Tourism">USA</option>
-                          <option value="European Tourism">EURO</option>
-                          <option value="Asia Tourism">ASIA</option>
+                          <option data-country="Australia" value="Australia Tourism">AUS</option>
+                          <option data-country="America" value="America Tourism">USA</option>
                         </select>
                   </fieldset>                
                 </form>                
-                </div>
+            </div>
 
                 <!-- Input Section -->
-            <div class="input-field col s12">
+            <div class="input-field col s12 center">
                 <form>
-                    <button class="waves-effect waves-light btn material-icons left" type="submit" value="search">search</button>
+                    <button class="waves-effect waves-light btn" id="searchbtn" type="submit" value="search">search</button>
                 </form>
                <!-- <a class="waves-effect waves-light btn"><i class="material-icons left"></i>Search</a>-->
             </div>
 
-            <!-- Search History Section -->
+            <!-- Search History Section
             <div class="col s12 btn-group">
                 <button class="waves-effect waves-light btn">sample</button>
                 <button class="waves-effect waves-light btn">sample</button>
                 <button class="waves-effect waves-light btn">sample</button>
+            </div>-->
+
+            <div class="row">
+                <div class="col s12">
+
+                    <ul id="searchHistory" class="">
+                        <!-- append li here li class="list-group-item"-->
+                    </ul>
+
+                </div>
             </div>
 
         </div>
 
         <!-- Right Col Section -->
-        <div class="col s9 right-side-col main-col">
+        <div class="col s12 right-side-col main-col">
 
             <div class="row">
 
@@ -83,8 +91,6 @@
 
             <!-- Youtube API Section -->
 
-
-            
                 <div class="col s12" id="videos">
              
                 <div class="col s12">
