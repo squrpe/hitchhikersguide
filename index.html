@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hitch Hikers Guide</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
     <link rel="stylesheet" href="./Assets/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -71,18 +75,24 @@
             <div class="row">
 
             <!-- Country API Section -->
-                <div class="col s6">
-                    <p>Test1</p>
-                </div>
-
-            <!-- Weather API Section -->
-                <div class="col s6">
-                    <p>test2</p>
+                <div class="col s12">
+                    <div class="card">
+                        <h2 id="country-name">Example</h2>
+                        <p id="region"></p>
+                        <p id="capital"></p>
+                        <p id="population"></p>
+                    </div>
                 </div>
 
             <!-- Youtube API Section -->
+
                 <div class="col s12" id="videos">
-                   
+             
+                <div class="col s12">
+                    <div class="card">
+                        <h2 id="country-name">YouTube</h2>
+                    </div>
+
                 </div>
             </div>
         </div>       
