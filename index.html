@@ -7,101 +7,69 @@
     <title>Hitch Hikers Guide</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css2?family=Brawler&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./Assets/styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script>  $( function() {
-        $( "#search" ).selectmenu();
-     
-
-      } );</script>
     
 </head>
 <body> 
 
     <!-- Header/Nav Bar Section -->
-    <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo center">Hitch Hikers Info Guide</a>
+    <header>
+        <h2 id="mainheader">Destination: Asia</h2>
+        <div class="right">
+            <h1 id="userTime"></h1>
         </div>
-    </nav>
+    </header>
 
     <!-- Main Content Section -->
     <div class="row">
 
-        <!-- Left Col Section -->
-        <div class="col s12 left-side-col">
+        <!-- Top Col Section -->
+        <div class="col s12 top-col">
 
-            <!--dropdown section from jquery UI-->
+            <!-- Dropdown Input : Jquery UI-->
             <div class="dropdown-container center">
-                <form action="#">               
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <form action="#">
                     <fieldset>
-                        <label for="dropdown">Select a speed</label>
+                        <label for="countrysearch">Select a country you're interested in...</label>             
                         <select name="dropdown" id="search">
-                          <option data-country="Australia" value="Australia Tourism">AUS</option>
-                          <option data-country="America" value="America Tourism">USA</option>
+                          <option data-country="China" value="China Tourism">China</option>
+                          <option data-country="Japan" value="Japan Tourism">Japan</option>
+                          <option data-country="Malaysia" value="Malaysia Tourism">Malaysia</option>
+                          <option data-country="India" value="India Tourism">India</option>
+                          <option data-country="South Korea" value="South Korea Tourism">South Korea</option>
+                          <option data-country="Singapore" value="Singapore Tourism">Singapore</option>
+                          <option data-country="Philippines" value="Philippines Tourism">Philippines</option>
+                          <option data-country="Nepal" value="Nepal Tourism">Nepal</option>
+                          <option data-country="Vietnam" value="Vietnam Tourism">Vietnam</option>
+                          <option data-country="Bangladesh" value="Bangladesh Tourism">Bangladesh</option>
                         </select>
-                  </fieldset>                
+                        <input type="submit" value="Submit" id='searchbtn'/>
+                    </fieldset>  
                 </form>                
             </div>
+        </div>
+        
 
-                <!-- Input Section -->
-            <div class="input-field col s12 center">
-                <form>
-                    <button class="waves-effect waves-light btn" id="searchbtn" type="submit" value="search">search</button>
-                </form>
-               <!-- <a class="waves-effect waves-light btn"><i class="material-icons left"></i>Search</a>-->
-            </div>
+        <!-- Country API Section -->
+        <div class="col s12" id="countrysection"></div>
 
-            <!-- Search History Section
-            <div class="col s12 btn-group">
-                <button class="waves-effect waves-light btn">sample</button>
-                <button class="waves-effect waves-light btn">sample</button>
-                <button class="waves-effect waves-light btn">sample</button>
-            </div>-->
-
-            <div class="row">
-                <div class="col s12">
-
-                    <ul id="searchHistory" class="">
-                        <!-- append li here li class="list-group-item"-->
-                    </ul>
-
-                </div>
-            </div>
-
+        <!-- Youtube API Section -->
+        <div class="col s12 center">
+            <div id="videossection"></div>
         </div>
 
-        <!-- Right Col Section -->
-        <div class="col s12 right-side-col main-col">
 
-            <div class="row">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-            <!-- Country API Section -->
-                <div class="col s12">
-                    <div class="card">
-                        <h2 id="country-name">Example</h2>
-                        <p id="region"></p>
-                        <p id="capital"></p>
-                        <p id="population"></p>
-                    </div>
-                </div>
+    <script>
+    $( function() {
+        $( "#search" ).selectmenu();
+      });
+    </script>
 
-            <!-- Youtube API Section -->
-
-                <div class="col s12" id="videos">
-             
-                <div class="col s12">
-                    <div class="card">
-                        <h2 id="country-name">YouTube</h2>
-                    </div>
-
-                </div>
-            </div>
-        </div>       
-    </div>
     <script type="text/javascript" src="./Assets/script.js"></script>
 </body>
 
