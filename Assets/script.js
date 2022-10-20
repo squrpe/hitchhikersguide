@@ -3,9 +3,25 @@ $(document).ready(function(){
     var API_KEY = "AIzaSyB4n8ZsQ41g-21s8rjJJDYZFSigRF8Qb4U"
     var video = ''
 
-    $("form").submit(function (event) {
-        event.preventDefault()
+    if (localStorage.getItem('inputCountryUser')) {
 
+        var countryPopup = document.getElementById('userCountry');
+
+        countryPopup.classList.remove('hidden');
+
+        userCountry.innerHTML = `
+        <p>You're currently in ${localStorage.getItem('inputCountryUser')}</p>
+        `;
+
+    }
+
+
+    $("#countryform").submit(function (event) {
+        event.preventDefault();
+
+        if (!localStorage.getItem('inputCountryUser'))
+            popupCountry();
+    
         var search = $("#search").find(":selected").val();
         console.log(search)
         var countryValue = $('#search').find(":selected").data('country');
@@ -67,6 +83,66 @@ $(document).ready(function(){
         })
     
     }
+
+    function popupCountry() {
+
+        console.log('test');
+
+        var countryList = [];
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        var modalBtn = document.getElementById('modalBtn');
+
+        modal.style.display = "block";
+
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        modalBtn.onclick = function(event) {
+
+            
+
+            var countryInput = $("#countryInputName").val();
+            console.log(countryInput);
+
+            modal.style.display = "none";
+
+            event.preventDefault();
+
+            if (!countryList.includes(countryInput)) {
+                countryList.push(countryInput);
+                
+                localStorage.setItem('inputCountryUser', countryInput);
+
+                var countryPopup = document.getElementById('userCountry');
+
+                countryPopup.classList.remove('hidden');
+
+                userCountry.innerHTML = `
+                <p>You're currently in ${countryInput}</p>
+                `;
+            };
+
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
+
+
+
 })
 
 
