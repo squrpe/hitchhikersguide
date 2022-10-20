@@ -112,3 +112,8 @@ iframe {
     display: inline-flex;
     justify-content: center;
 }
+
+.list-group-item{
+    color: white;
+}
+

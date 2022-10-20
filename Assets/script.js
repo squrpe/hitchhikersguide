@@ -72,6 +72,12 @@ $(document).ready(function(){
 
 
 
+
+
+
+
+
+
 // // function to store locally
 // var searchHistoryList = [];
 // $("#searchbtn").on("click", function(event) {
@@ -89,3 +95,10 @@ $(document).ready(function(){
 //     localStorage.setItem("city", JSON.stringify(searchHistoryList));
 //     console.log(searchHistoryList);
 // });
+
+// $(document).on("click", ".list-group-item", function() {
+//     var listCity = $(this).text();
+//     countrySearch(listCity);
+//     videoSearch(listCity);
+// });
+
