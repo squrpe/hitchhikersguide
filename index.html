@@ -16,8 +16,8 @@
     <!-- Header/Nav Bar Section -->
     <header>
         <h2 id="mainheader">Destination: Asia</h2>
-        <div class="right">
-            <h1 id="userTime"></h1>
+        <div class="right" id="userCountry" class="hidden">
+            <!-- <h2 id="userCountry" class="hidden">test</h2> -->
         </div>
     </header>
 
@@ -31,7 +31,7 @@
             <div class="dropdown-container center">
                 <p>Welcome to Hitch Hikers Guide - Destination: Asia</p>
               
-                <form action="#">
+                <form action="#" id="countryform">
                     <fieldset>
                         <label for="countrysearch">Select a country you're interested in, then press the search button.</label>             
                         <select name="dropdown" id="search">
@@ -50,6 +50,20 @@
                     </fieldset>  
                 </form>                
             </div>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+            <span class="close">&times;</span>
+                <form>
+                    <input type="text" id="countryInputName" placeholder="Enter the country that you are currently in...">
+                    <button id="modalBtn">Submit</button>
+                </form>
+            </div>
+        
         </div>
         
 
