@@ -11,12 +11,21 @@
 
 }
 
+html{
+
+    scroll-behavior: smooth;
+
+}
+
 body{
     margin: 0;
     padding: 0;
-    background-color: var(--dark-grey);
+   /* background-color: var(--dark-grey);*/
 }
+.row .col {
 
+    min-height: 0px;
+}
 .btn {
     background-color: var(--bright-pink);
 }
@@ -28,31 +37,74 @@ body{
 /* Header / Nav Bar CSS Selectors */
 
 h2 {
-    font-family: 'Merriweather', serif;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 header {
     background-color: #f1f1f1;
     padding: 1px;
-    height: 120px;
+    height: 20vh;
+    filter: drop-shadow(-2px 13px 10px rgba(0, 0, 0, 0.377));
 }
 
 header h2 {
     padding-left: 20px;
     float:left;
+    margin: 0px;
+    
 }
 .mainheader {
 
+    padding: 0px    ;
+    
+
 }
 
+.header-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container p {
+
+margin: 0px;
+margin-right: 20px;
+font-weight: bold;
+}
 .right {
     float: right;
+}
+
+.bg{
+    
+    background-color: rgba(255, 255, 255, 0);
 }
 
 /* Input CSS Selectors */
 
 .top-col{
-    background-color: var(--light-grey);
+
+background-image: url("/hitchhikersguide/a.jpg");
+background-size: 100%;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+  
+}
+.row{
+
+margin-bottom: 0px;
+
 }
 
 fieldset {
@@ -62,8 +114,15 @@ fieldset {
 
 label {
     display: block;
+    margin-bottom: 20px;
+    font-size: 15px;
 }
 
+input#searchbtn{
+
+    margin-top: 20px;
+
+}
 .overflow {
     height: 200px;
 }
@@ -71,7 +130,15 @@ label {
 .dropdown-container {
     color: white;
     font-size: 18px;
+    font-weight: bold;
     padding: 18px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #060606a8;
+    border-radius: 10px;
+    filter: drop-shadow(-2px 13px 10px rgba(0, 0, 0, 0.377));
+    
 }
 
 #searchbtn {
@@ -82,30 +149,98 @@ label {
 
 #countrysection {
     color: white;
-    display: flex;
+    background-image: url("/hitchhikersguide/b.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     flex-direction: row;
     flex-wrap: wrap; 
     justify-content: center;
-    height: 40vh;
+    height: 100vh;
+    display: none;
+    filter: drop-shadow(-2px 13px 10px rgba(0, 0, 0, 0.377));
 }
 
+#countryinfodiv {
+    background-color: #060606a8;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    
+}
 #imgdiv {
     padding: 20px;
 }
 
 #imgdiv img {
     max-height: 275px;
+    max-width: 100%;
+    filter: drop-shadow(-2px 13px 10px rgba(0, 0, 0, 0.377));
 }
 
-#countryinfodiv{
+.infosection{
 
+    background-color: rebeccapurple;
 }
+
+.margin {
+
+    margin-left: 25px;
+    background-color: #060606a8;
+}
+.margin:hover {
+
+    margin-left: 25px;
+    background-color: #060606;
+}
+
 
 #videossection {
-    justify-content: center;
+   justify-content: center;
+   min-height: 100vh;
+
+    
+    width: 100%;
+    overflow: hidden;
+    background-image: url("/hitchhikersguide/c.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+
 }
 
+#videossection h2 {
+
+    margin-bottom: 100px;
+    background-color: rgba(16, 16, 16, 0.37) ;
+    border-radius: 10px;
+}
+
+
+.responsive-iframe {
+  
+    padding: 20px;
+    margin: 0px;
+    width: 25%;
+    height: 50%;
+    
+    background-color: rgba(1, 1, 1, 0.466);
+    filter: drop-shadow(-2px 13px 20px rgba(0, 0, 0, 0.532));
+  }
+
+
 #videossection h2{
+
     color: white;
     text-align: center;
 }
@@ -113,4 +248,28 @@ label {
 iframe {
     display: inline-flex;
     justify-content: center;
+    
+}
+
+
+.home-btn {
+
+
+
+
+}
+
+.footer-copyright{
+background-color: rgba(0, 0, 0, 0.837);
+height: 5vh;
+display: flex;
+align-items: center;
+color: white;
+
+}
+
+
+.hidden{
+
+    display: none;
 }

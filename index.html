@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link href="https://fonts.googleapis.com/css2?family=Brawler&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./Assets/styles.css">
     
 </head>
 <body> 
-
+    
     <!-- Header/Nav Bar Section -->
-    <header>
+    <header class="header-container" id="test">
         <h2 id="mainheader">Destination: Asia</h2>
         <div class="right" id="userCountry" class="hidden">
             <!-- <h2 id="userCountry" class="hidden">test</h2> -->
@@ -22,13 +23,13 @@
     </header>
 
     <!-- Main Content Section -->
-    <div class="row">
-
+    <div class="row bg">
+    
         <!-- Top Col Section -->
         <div class="col s12 top-col">
 
             <!-- Dropdown Input : Jquery UI-->
-            <div class="dropdown-container center">
+            <div class="dropdown-container center valign-wrapper">
                 <p>Welcome to Hitch Hikers Guide - Destination: Asia</p>
               
                 <form action="#" id="countryform">
@@ -46,11 +47,13 @@
                           <option data-country="Vietnam" value="Vietnam Tourism">Vietnam</option>
                           <option data-country="Bangladesh" value="Bangladesh Tourism">Bangladesh</option>
                         </select>
-                        <input type="submit" value="Submit" id='searchbtn'/>
+                        <br> 
+                        <input type="submit" value="Submit" id='searchbtn'>
                     </fieldset>  
                 </form>                
             </div>
         </div>
+    
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
@@ -68,14 +71,30 @@
         
 
         <!-- Country API Section -->
-        <div class="col s12" id="countrysection"></div>
-
-        <!-- Youtube API Section -->
-        <div class="col s12 center">
-            <div id="videossection"></div>
+        <div class="col s12 valign-wrapper" id="countrysection">
+            
         </div>
 
+        <!-- Youtube API Section -->
+        
+                <div class="hidden col s12 center"   id="videossection">
 
+                
+                </div>
+                
+           
+    </div>  
+
+            
+
+            
+            <div class="footer-copyright">
+              <div class="container">
+              © 2014 Copyright Text
+              <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+              </div>
+           
+          </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
@@ -86,6 +105,7 @@
     </script>
 
     <script type="text/javascript" src="./Assets/script.js"></script>
+
 </body>
 
 
