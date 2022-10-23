@@ -1,48 +1,80 @@
 /* Universal CSS Selectors */
-
 :root {
 
-    --dark-grey: #1A1A1D;
-    --light-grey: #4E4E50;
+    --dark-transperant: #060606a8;
 
-    --bright-pink: #C3073F;
-    --red-pink: #950740;
-    --muted-pink: #6F2232;
+    --borderRad: 15px;
+    --drop-shadow: drop-shadow(-2px 13px 10px rgba(0, 0, 0, 0.377));
+}
+
+html{
+    scroll-behavior: smooth;
 
 }
 
 body{
     margin: 0;
     padding: 0;
-    background-color: var(--dark-grey);
+
 }
 
-.btn {
-    background-color: var(--bright-pink);
+.row{
+    margin-bottom: 0px;
+    
 }
 
-.btn:hover {
-    background-color: var(--muted-pink);
+.row .col {
+
+    min-height: 0px;
+}
+
+.hidden{
+    display: none;
+    
 }
 
 /* Header / Nav Bar CSS Selectors */
-
 h2 {
-    font-family: 'Merriweather', serif;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
 }
 
 header {
-    background-color: #f1f1f1;
+    height: 20vh;
     padding: 1px;
-    height: 120px;
+
+    background-color: rgba(0, 0, 0, 0.837);
+    filter: var(--drop-shadow);
+
 }
 
 header h2 {
+    margin: 0px;
     padding-left: 20px;
-    float:left;
+    float: left;
+    color: white;
+    
 }
 .mainheader {
+    padding: 0px;
+   
+    
+}
 
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header-container p {
+    margin: 0px;
+    margin-right: 20px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
 }
 
 .right {
@@ -50,67 +82,294 @@ header h2 {
 }
 
 /* Input CSS Selectors */
-
 .top-col{
-    background-color: var(--light-grey);
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("/hitchhikersguide/a.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 fieldset {
     margin: 4px 4px;
     border: 0;
+
 }
 
 label {
     display: block;
+    margin-bottom: 20px;
+    font-size: 15px;
+
 }
 
+input#searchbtn{
+
+    margin-top: 20px;
+
+}
 .overflow {
     height: 200px;
+
 }
 
 .dropdown-container {
-    color: white;
-    font-size: 18px;
+    display: flex;
+    flex-direction: column;
     padding: 18px;
-}
 
-#searchbtn {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+
+    background-color: var(--dark-transperant);
+    border-radius: var(--borderRad);
+    filter: var(--drop-shadow);
 
 }
 
 /* Main Content CSS Selectors */
-
 #countrysection {
-    color: white;
-    display: flex;
+    height: 100vh;
+
+    display: none;
     flex-direction: row;
     flex-wrap: wrap; 
     justify-content: center;
-    height: 40vh;
+
+    color: white;
+
+    background-image: url("/hitchhikersguide/b.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: var(--drop-shadow);
+
+}
+
+#countryinfodiv {
+    width: 30%;
+    padding: 20px;
+
+    background-color: var(--dark-transperant);
+    border-radius: var(--borderRad);
+    
 }
 
 #imgdiv {
     padding: 20px;
+
 }
 
 #imgdiv img {
     max-height: 275px;
+    max-width: 100%;
+    filter: var(--drop-shadow);
+
 }
 
-#countryinfodiv{
+.scroll-btn {
+
+    margin-left: 25px;
+    background-color: var(--dark-transperant);
 
 }
+.scroll-btn:hover {
+
+    margin-left: 25px;
+    background-color: #060606;
+
+}
+
 
 #videossection {
+    width: 100%;
+    min-height: 100vh;
     justify-content: center;
+
+    background-image: url("/hitchhikersguide/c.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow: hidden;
+
 }
 
-#videossection h2{
+#videossection h2 {
+    margin-bottom: 100px;
+
+    background-color: var(--dark-transperant);
+    border-radius: var(--borderRad);
     color: white;
     text-align: center;
 }
 
+
+.responsive-iframe {
+    width: 25%;
+    height: 50%;  
+   
+    margin: 0px;
+
+    background-color: rgba(1, 1, 1, 0.466);
+    filter: var(--drop-shadow);
+
+  }
+
 iframe {
     display: inline-flex;
     justify-content: center;
+
 }
+/* Footer CSS Selectors */
+.footer-copyright {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.837);
+
+}
+
+
+
+@media (max-width: 675px) {
+    .top-col {
+        background-position-x: right;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: column;
+     
+        
+    
+    }
+
+    header h2 {
+    margin: 0px;
+    padding-left: 0px;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    
+}
+
+.header-container p {
+    margin: 0px;
+
+    font-weight: bold;
+    color: white;
+    margin-bottom: 25px;
+}
+
+#imgdiv img {
+    max-height: 175px;
+    max-width: 100%;
+    filter: var(--drop-shadow);
+
+}
+#countryinfodiv {
+    width: 50%;
+    height: 30%;
+    
+    text-align: center  ;
+    font-size: 0.5rem ;
+    background-color: var(--dark-transperant);
+    border-radius: var(--borderRad);
+    
+}
+#countryinfodiv h2{
+
+    font-size: 2rem;
+
+}
+
+#countrysection{
+
+    flex-direction: column;
+}
+
+#videossection h2 {
+    margin-bottom: 25px;
+    font-size: 2.5rem   ;
+    background-color: var(--dark-transperant);
+    border-radius: var(--borderRad);
+    color: white;
+    text-align: center;
+}
+
+}
+
+
+@media (max-height: 625px) {
+    #videossection h2 {
+        margin-bottom: 20px;
+    
+        background-color: var(--dark-transperant);
+        border-radius: var(--borderRad);
+        color: white;
+        text-align: center;
+    }
+
+
+}
+/*
+#videossection {
+    width: 100%;
+    max-height: 100vh;
+    justify-content: center;
+
+    background-image: url("/hitchhikersguide/c.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow: hidden;
+
+}
+
+
+
+
+.responsive-iframe {
+    width: 25%;
+    height: 50%;  
+   
+    margin: 0px;
+
+    background-color: rgba(1, 1, 1, 0.466);
+    filter: var(--drop-shadow);
+
+  }
+
+iframe {
+    display: inline-flex;
+    justify-content: center;
+
+}*/
+
+

@@ -1,8 +1,8 @@
 $(document).ready(function(){
-
-    var API_KEY = "AIzaSyB4n8ZsQ41g-21s8rjJJDYZFSigRF8Qb4U"
+   
+    var API_KEY = "AIzaSyD3l1Okg79baeg3IRNCc2gnBS7JZuPops0"
     var video = ''
-
+    
     if (localStorage.getItem('inputCountryUser')) {
 
         var countryPopup = document.getElementById('userCountry');
@@ -14,7 +14,7 @@ $(document).ready(function(){
         `;
 
     }
-
+    
 
     $("#countryform").submit(function (event) {
         event.preventDefault();
@@ -29,7 +29,10 @@ $(document).ready(function(){
 
         countrySearch(countryValue)
         videoSearch(API_KEY,search,6,countryValue)
+
+
         
+
     })
 
 
@@ -40,14 +43,21 @@ $(document).ready(function(){
 
             videossection.innerHTML = `
             <h2>Recommended Youtube Videos for ${countryValue} Tourism:</h2>
+            <a class="btn-floating btn-large waves-effect waves-light scroll-btn"><i id="home-btn" class="material-icons">keyboard_arrow_up</i></a>
             `;
+
+
+
 
             data.items.forEach(item => {
                 video = `
-                    <iframe width="420" height="315" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
+                    <iframe class="responsive-iframe" width="420" height="315" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
                 `
                 $("#videossection").append(video)
+
             });
+
+
         })
     }
 
@@ -65,7 +75,11 @@ $(document).ready(function(){
 
             countrysection.innerHTML = `
                 
-                <div id="countryinfodiv">
+            <div id="imgdiv">
+                <img src="${data[0].flags.svg}" alt="${countryValue} Flag" id="flagimg">
+            </div>
+
+                <div  id="countryinfodiv">
                     <h2 id="countryname">${data[0].name.common}</h2>
                     <p id="capital">Capital: ${data[0].capital[0]}</p>
                     <p id="continent">Continent: ${data[0].continents[0]}</p>
@@ -73,16 +87,60 @@ $(document).ready(function(){
                     <p id="currency">Currency: ${data[0].currencies[Object.keys(data[0].currencies)].name} - ${Object.keys(data[0].currencies)[0]}</p>
                     <p id="languages">Common Languages: ${Object.values(data[0].languages).toString().split(",").join(", ")}</p>
                 </div>
+                <br>
+                    <a class="btn-floating btn-large waves-effect waves-light scroll-btn"><i id="info-btn" class="material-icons">keyboard_arrow_down</i></a>
 
-                <div id="imgdiv">
-                    <img src="${data[0].flags.svg}" alt="${countryValue} Flag" id="flagimg">
-                </div>
+
 
             `;
+            //displays country and video divs after they have rendered the api data
+            var div = document.getElementById('countrysection');
+            var vid = document.getElementById('videossection');
+            div.style.display = 'flex';
+            vid.classList.remove("hidden");
 
-        })
+            
+
+          
+            //submit button scroll
+            scroll()
     
+            function scroll() {
+                $('html, body').animate({
+                    scrollTop: $("#countrysection").offset().top
+               }, 2000);
+               return false;
+            }    
+            //info page button scroller
+            var vidBtn = document.getElementById('info-btn')
+            vidBtn.onclick = function vidScroll() {
+                
+                console.log('info-btn')
+                $('html, body').animate({
+                    scrollTop: $("#videossection").offset().top
+                }, 1000);
+                 return false;
+                } 
+            //home button scroller
+                var homeBtn = document.getElementById('home-btn')
+                homeBtn.onclick = function homeScroll() {
+                    
+                    console.log('info-btn')
+                    $('html, body').animate({
+                        scrollTop: $("#home").offset().top
+                    }, 1000);
+                     return false;
+                    } 
+            
+        })
+        
+        
+      
+
     }
+
+
+
 
     function popupCountry() {
 
@@ -144,6 +202,8 @@ $(document).ready(function(){
 
 
 })
+
+
 
 
 
