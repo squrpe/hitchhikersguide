@@ -58,7 +58,7 @@ header h2 {
 }
 .mainheader {
     padding: 0px;
-    
+   
     
 }
 
@@ -74,6 +74,7 @@ header h2 {
     margin-right: 20px;
     font-weight: bold;
     color: white;
+    text-align: center;
 }
 
 .right {
@@ -252,6 +253,57 @@ iframe {
 
     color: white;
     background-color: rgba(0, 0, 0, 0.837);
+
+}
+
+
+
+@media (max-width: 480px) {
+    .top-col {
+        background-position-x: right;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: column;
+     
+        
+    
+    }
+
+    header h2 {
+    margin: 0px;
+    padding-left: 0px;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    
+}
+
+.header-container p {
+    margin: 0px;
+
+    font-weight: bold;
+    color: white;
+    margin-bottom: 25px;
+}
+
+#imgdiv img {
+    max-height: 175px;
+    max-width: 100%;
+    filter: var(--drop-shadow);
+
+}
+#countryinfodiv {
+    width: 100%;
+    padding: 20px;
+
+    background-color: var(--dark-transperant);
+    border-radius: var(--borderRad);
+    
+}
+
+
 
 }
 
