@@ -43,7 +43,7 @@ $(document).ready(function(){
 
             videossection.innerHTML = `
             <h2>Recommended Youtube Videos for ${countryValue} Tourism:</h2>
-            <a class="btn-floating btn-large waves-effect waves-light margin"><i id="home-btn" class="material-icons">keyboard_arrow_down</i></a>
+            <a class="btn-floating btn-large waves-effect waves-light scroll-btn"><i id="home-btn" class="material-icons">keyboard_arrow_up</i></a>
             `;
 
 
@@ -88,7 +88,7 @@ $(document).ready(function(){
                     <p id="languages">Common Languages: ${Object.values(data[0].languages).toString().split(",").join(", ")}</p>
                 </div>
                 <br>
-                    <a class="btn-floating btn-large waves-effect waves-light margin"><i id="info-btn" class="material-icons">keyboard_arrow_down</i></a>
+                    <a class="btn-floating btn-large waves-effect waves-light scroll-btn"><i id="info-btn" class="material-icons">keyboard_arrow_down</i></a>
 
 
 
@@ -118,17 +118,17 @@ $(document).ready(function(){
                 console.log('info-btn')
                 $('html, body').animate({
                     scrollTop: $("#videossection").offset().top
-                }, 2000);
+                }, 1000);
                  return false;
                 } 
-
+            //home button scroller
                 var homeBtn = document.getElementById('home-btn')
                 homeBtn.onclick = function homeScroll() {
                     
                     console.log('info-btn')
                     $('html, body').animate({
-                        scrollTop: $("#test").offset().top
-                    }, 2000);
+                        scrollTop: $("#home").offset().top
+                    }, 1000);
                      return false;
                     } 
             

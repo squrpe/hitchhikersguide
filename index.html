@@ -15,7 +15,7 @@
 <body> 
     
     <!-- Header/Nav Bar Section -->
-    <header class="header-container" id="test">
+    <header class="header-container" id="home">
         <h2 id="mainheader">Destination: Asia</h2>
         <div class="right" id="userCountry" class="hidden">
             <!-- <h2 id="userCountry" class="hidden">test</h2> -->
@@ -48,63 +48,51 @@
                           <option data-country="Bangladesh" value="Bangladesh Tourism">Bangladesh</option>
                         </select>
                         <br> 
-                        <input type="submit" value="Submit" id='searchbtn'>
+                        <input type="submit" value="Search" id='searchbtn'>
                     </fieldset>  
                 </form>                
             </div>
         </div>
+        <!-- Country API Section -->
         <div class="col s12 valign-wrapper" id="countrysection">
-            
+
         </div>
-        
+        <!-- Youtube API Section -->
         <div class="hidden col s12 center"   id="videossection">
-
-                
+         
         </div>
         
-        <!-- The Modal -->
+        <!-- User Country Modal -->
         <div id="myModal" class="modal">
-
-            <!-- Modal content -->
             <div class="modal-content">
-            <span class="close">&times;</span>
+                <span class="close">&times;</span>
                 <form>
                     <input type="text" id="countryInputName" placeholder="Enter the country that you are currently in...">
                     <button id="modalBtn">Submit</button>
                 </form>
-            </div>
-        
-        </div>
-        
+            </div>      
+        </div>                            
+    </div> 
 
-        <!-- Country API Section -->
-
-
-        <!-- Youtube API Section -->
-
-                
-           
-    </div>  
-
-            
-
-            
+        <!--footer section-->
+        <footer>            
             <div class="footer-copyright">
-              <div class="container">
-              © 2014 Copyright Text
-              <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-              </div>
-           
-          </footer>
+                <div class="container">
+                    © 2014 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>   
+        </footer>
+        
+
+    <!--Dropdown menu scripts - jquery-->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
     <script>
     $( function() {
         $( "#search" ).selectmenu();
       });
     </script>
-
+    <!--assets js file-->
     <script type="text/javascript" src="./Assets/script.js"></script>
 
 </body>
