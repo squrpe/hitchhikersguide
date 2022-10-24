@@ -1,9 +1,9 @@
 /* Universal CSS Selectors */
 :root {
 
-    --dark-transperant: #060606a8;
+    --dark-transperant: #e91818d9;
 
-    --borderRad: 15px;
+    --borderRad: 20px;
     --drop-shadow: drop-shadow(-2px 13px 10px rgba(0, 0, 0, 0.377));
 }
 
@@ -41,10 +41,10 @@ h2 {
 }
 
 header {
-    height: 20vh;
+    height: 25vh;
     padding: 1px;
 
-    background-color: rgba(0, 0, 0, 0.837);
+    background-color: rgba(210, 11, 11, 0.837);
     filter: var(--drop-shadow);
 
 }
@@ -53,7 +53,7 @@ header h2 {
     margin: 0px;
     padding-left: 20px;
     float: left;
-    color: white;
+    color: rgb(254, 254, 254);
     
 }
 .mainheader {
@@ -371,5 +371,3 @@ iframe {
     justify-content: center;
 
 }*/
-
-
