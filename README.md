@@ -17,8 +17,6 @@ We learnt how to incorporate different web API's.
 - THEN I am presented with the basic country information regarding capital, currency, flag and the common language
 - WHEN I view the country which i selected
 - THEN I am presented with youtube recommended tourism videos related to each selected country.
-- WHEN I view future weather conditions for that city
-- THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
 - WHEN I enter the coutry which i am currently living in, it will save into the local storage.
 - THEN I am again presented with current country after even the page refresh.
 
