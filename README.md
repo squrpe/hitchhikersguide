@@ -52,7 +52,7 @@ https://user-images.githubusercontent.com/109736323/197428551-05240a10-65d9-4967
 
   # Websites
 - Github: https://github.com/squrpe/hitchhikersguide
-- Deployed: 
+- Deployed: https://squrpe.github.io/hitchhikersguide/
   
   
 
