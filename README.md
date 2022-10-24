@@ -1,5 +1,11 @@
    # hitchhikersguide
    
+## Description
+This project is a Travel Recommendation Page.
+The motivation was to make a user-friendly experience. 
+It solved the problem of compiling multiple sources of information together.
+We learnt how to incorporate different web API's.
+   
   # User Story:
 - As a traveler I want to search for the ten countries in Asia.
 - I can access the country information and tourism related youtube videos related to each country on my web page.
@@ -48,3 +54,20 @@ https://user-images.githubusercontent.com/109736323/197428551-05240a10-65d9-4967
 - Github: https://github.com/squrpe/hitchhikersguide
 - Deployed: 
   
+  
+
+## Installation
+
+The user will have to open the deployed link.
+
+## Credits
+
+Developed in collaboration with:
+Lara Grocke- https://github.com/squrpe
+Fatin Mehdi- https://github.com/fatin121312
+Will Formato- https://github.com/Willbania
+Aju Thomas- https://github.com/thomasaju 
+
+
+## License
+Standard MIT license
